@@ -45,3 +45,27 @@ func DeletePage(filePath string) error {
 
 	return nil
 }
+
+
+func CreatePage(filePath string, toolName string) error {
+	template := fmt.Sprintf(`==================================================
+%s QUICKSTART GUIDE
+==================================================
+
+Description:
+  [Briefly describe what %s does]
+
+Common Commands:
+  command: %s param1 param2
+  ...
+
+==================================================`, toolName, toolName, toolName)
+
+	err := os.WriteFile(filePath, []byte(template), 0644)
+
+	if err != nil {
+		return fmt.Errorf("[FATAL] - Error creating new page: %w\n", err)
+	}
+
+	return nil
+}

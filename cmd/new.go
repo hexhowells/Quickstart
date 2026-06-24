@@ -27,6 +27,7 @@ var newCmd = &cobra.Command{
 			fmt.Printf("Quickstart page for '%s' already exists.\n", toolName)
 			return
 		} else {
+			pages.CreatePage(filePath, toolName)
 			pages.OpenInEditor(filePath)
 		}
 	},
