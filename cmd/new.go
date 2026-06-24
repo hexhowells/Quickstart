@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"log"
+	"fmt"
 	
 	"quickstart/internal/pages"
 
@@ -20,7 +21,14 @@ var newCmd = &cobra.Command{
 			log.Fatalf("[FATAL] - Error resolving the filepath: %w\n", err)
 		}
 
-		pages.OpenInEditor(filePath)
+		pageExists := pages.PageExists(filePath)
+
+		if pageExists {
+			fmt.Printf("Quickstart page for '%s' already exists.\n", toolName)
+			return
+		} else {
+			pages.OpenInEditor(filePath)
+		}
 	},
 }
 
