@@ -3,9 +3,9 @@ package cmd
 import (
 	"log"
 
-	"github.com/spf13/cobra"
-
 	"quickstart/internal/pages"
+
+	"github.com/spf13/cobra"
 )
 
 var editCmd = &cobra.Command{
