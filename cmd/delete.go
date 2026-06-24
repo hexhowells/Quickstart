@@ -21,13 +21,13 @@ var deleteCmd = &cobra.Command{
 		filePath, err := pages.GetPathPath(toolName)
 
 		if err != nil {
-			log.Fatalf("[FATAL] - Error resolving the filepath: %w", err)
+			log.Fatalf("[FATAL] - Error resolving the filepath: %w\n", err)
 		}
 
 		pageExists := pages.PageExists(filePath)
 
 		if !pageExists {
-			log.Fatalf("Quickstart page for %s does not exist.", toolName)
+			log.Fatalf("Quickstart page for %s does not exist.\n", toolName)
 		}
 		
 		fmt.Printf("You are about to delete the quickstart page for %s", toolName)

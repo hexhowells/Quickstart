@@ -17,7 +17,7 @@ var newCmd = &cobra.Command{
 		filePath, err := pages.GetPathPath(toolName)
 
 		if err != nil {
-			log.Fatalf("[FATAL] - Error resolving the filepath: %w", err)
+			log.Fatalf("[FATAL] - Error resolving the filepath: %w\n", err)
 		}
 
 		pages.OpenInEditor(filePath)
