@@ -25,7 +25,7 @@ var editCmd = &cobra.Command{
 		if pageExists {
 			pages.OpenInEditor(filePath)
 		} else {
-			log.Fatalf("Quickstart page for %s does not exist. Please run \"quickstart new %s\" first.", toolName, toolName)
+			log.Fatalf("Quickstart page for %s does not exist. Please run 'quickstart new %s' first.", toolName, toolName)
 		}
 	},
 }
