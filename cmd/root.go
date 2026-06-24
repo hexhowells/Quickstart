@@ -3,7 +3,10 @@ package cmd
 import (
 	"fmt"
 	"os"
-	
+
+	"quickstart/internal/pages"
+	"quickstart/internal/ui"
+
 	"github.com/spf13/cobra"
 )
 
@@ -19,8 +22,24 @@ var rootCmd = &cobra.Command{
 	}
 	
 	toolName := args[0]
-	fmt.Printf("🔍 Searching and displaying quickstart for: %s\n", toolName)
-	// TODO: call internal/ui.RenderPage(toolName)
+	
+	filePath, err := pages.GetPathPath(toolName)
+	if err != nil {
+		fmt.Printf("[FATAL] - Error resolving path: %v\n", err)
+		return
+	}
+
+	pageExists := pages.PageExists(filePath)
+
+	if !pageExists {
+		fmt.Printf("No quickstart page exists for '%s'\n", toolName)
+		fmt.Printf("Run 'quickstart new %s' to create one.\n", toolName)
+		return
+	}
+
+	if err := ui.RenderPage(filePath); err != nil {
+		fmt.Printf("[FATAL] - Error rendering page: %v\n", err)
+	}
   },
 }
 
