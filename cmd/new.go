@@ -1,7 +1,9 @@
 package cmd
 
 import (
-	"fmt"
+	"log"
+	
+	"quickstart/internal/pages"
 
 	"github.com/spf13/cobra"
 )
