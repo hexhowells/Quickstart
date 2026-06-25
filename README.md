@@ -12,10 +12,6 @@ First create a new quickstart page:
 quickstart new <tool-name>
 ```
 
-This will create a new template page and open it in your default editor to be customised.
-
----
-
 Now you can view the page:
 ```bash
 quickstart <tool-name>
