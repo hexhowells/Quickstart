@@ -23,7 +23,7 @@ var rootCmd = &cobra.Command{
 	
 	toolName := args[0]
 	
-	filePath, err := pages.GetPathPath(toolName)
+	filePath, err := pages.GetPath(toolName)
 	if err != nil {
 		fmt.Printf("[FATAL] - Error resolving path: %v\n", err)
 		return

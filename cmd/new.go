@@ -15,7 +15,7 @@ var newCmd = &cobra.Command{
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		toolName := args[0]
-		filePath, err := pages.GetPathPath(toolName)
+		filePath, err := pages.GetPath(toolName)
 
 		if err != nil {
 			log.Fatalf("[FATAL] - Error resolving the filepath: %w\n", err)

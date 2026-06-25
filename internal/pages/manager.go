@@ -9,7 +9,7 @@ import (
 )
 
 
-func GetPathPath(toolName string) (string, error) {
+func GetPath(toolName string) (string, error) {
 	baseDir := filepath.Join(xdg.DataHome, "quickstart")
 
 	err := os.MkdirAll(baseDir, 0755)  // mkdir -p
