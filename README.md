@@ -2,7 +2,7 @@
 	<img width="80%" src="https://github.com/hexhowells/Quickstart/blob/main/logo.png" alt="Quickstart tool logo">
 </p>
 
-Quickstart is a linux command line utility that lets you build man pages containing only the essential commands you need, making it super fast to recall tool usage for only the commands you use.
+Quickstart is a linux command line utility that lets you build man pages containing only the essential commands you need, making it super fast to recall tool usage for your personalised needs.
 
 
 ## Quickstart²
