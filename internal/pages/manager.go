@@ -3,6 +3,9 @@ package pages
 import (
 	"os"
 	"fmt"
+	"log"
+	"strings"
+	"slices"
 	"path/filepath"
 
 	"github.com/adrg/xdg"
@@ -33,6 +36,25 @@ func PageExists(filePath string) bool {
 	}
 
 	return false
+}
+
+
+func GetPages() []string {
+	baseDir := filepath.Join(xdg.DataHome, "quickstart")
+	pages, err := os.ReadDir(baseDir)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	availablePages := make([]string, len(pages))
+	for i, p := range pages {
+		toolName := strings.TrimSuffix(p.Name(), ".md")
+		availablePages[i] = toolName
+	}
+
+	slices.Sort(availablePages)
+
+	return availablePages
 }
 
 
