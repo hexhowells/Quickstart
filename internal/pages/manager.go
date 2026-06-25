@@ -71,15 +71,14 @@ func DeletePage(filePath string) error {
 
 func CreatePage(filePath string, toolName string) error {
 	template := fmt.Sprintf(`==================================================
-%s QUICKSTART GUIDE
+%s Quickstart Guide
 ==================================================
 
 Description:
   [Briefly describe what %s does]
 
-Common Commands:
+Commands:
   command: %s param1 param2
-  ...
 
 ==================================================`, toolName, toolName, toolName)
 
