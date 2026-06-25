@@ -5,7 +5,7 @@
 Quickstart is a linux command line utility that lets you build man pages containing only the essential commands you need, making it super fast to recall tool usage for only the commands you use.
 
 
-## Quickstart
+## Quickstart²
 First create a new quickstart page:
 
 ```bash
