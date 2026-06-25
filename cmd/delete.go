@@ -30,7 +30,7 @@ var deleteCmd = &cobra.Command{
 			log.Fatalf("Quickstart page for %s does not exist.\n", toolName)
 		}
 		
-		fmt.Printf("You are about to delete the quickstart page for %s", toolName)
+		fmt.Printf("Warning! You are about to delete the quickstart page for %s", toolName)
 		fmt.Printf("\nIf you are sure you want to delete this page, type '%s': ", toolName)
 
 		scanner := bufio.NewScanner(os.Stdin)
