@@ -6,7 +6,7 @@ Quickstart is a linux command line utility that lets you build man pages contain
 
 
 ## Quickstart
-First create a new quickstart page
+First create a new quickstart page:
 
 ```bash
 quickstart new <tool-name>
@@ -14,24 +14,26 @@ quickstart new <tool-name>
 
 This will create a new template page and open it in your default editor to be customised.
 
-Now you can view the page using
+---
+
+Now you can view the page:
 ```bash
 quickstart <tool-name>
 ```
 
-You can edit an existing quickstart page with
+You can edit an existing quickstart page:
 
 ```bash
 quickstart edit <tool-name>
 ```
 
-If a page is no longer needed, it can be deleted entirely
+If a page is no longer needed, it can be deleted entirely:
 
 ```bash
 quickstart delete <tool-name>
 ```
 
-You can also list available pages
+You can also list available pages:
 
 ```bash
 quickstart list
