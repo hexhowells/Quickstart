@@ -14,12 +14,12 @@ quickstart new <tool-name>
 
 This will create a new template page and open it in your default editor to be customised.
 
-Now we can view the page using
+Now you can view the page using
 ```bash
 quickstart <tool-name>
 ```
 
-We can edit an existing quickstart page with
+You can edit an existing quickstart page with
 
 ```bash
 quickstart edit <tool-name>
@@ -29,4 +29,10 @@ If a page is no longer needed, it can be deleted entirely
 
 ```bash
 quickstart delete <tool-name>
+```
+
+You can also list available pages
+
+```bash
+quickstart list
 ```
