@@ -69,6 +69,17 @@ func DeletePage(filePath string) error {
 }
 
 
+func RenamePage(filePath string, newFilePath string) error {
+	err := os.Rename(filePath, newFilePath)
+
+	if err != nil {
+		return fmt.Errorf("failed to rename file: %w", err)
+	}
+
+	return nil
+}
+
+
 func CreatePage(filePath string, toolName string) error {
 	template := fmt.Sprintf(`==================================================
 %s Quickstart Guide
