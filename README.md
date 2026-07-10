@@ -34,3 +34,9 @@ You can also list available pages:
 ```bash
 quickstart list
 ```
+
+To rename a page:
+
+```bash
+quickstart rename <old-name> <new-name>
+```
