@@ -20,7 +20,7 @@ func GetPath(toolName string) (string, error) {
 		return "", err
 	}
 
-	return filepath.Join(baseDir, toolName+".md"), nil
+	return filepath.Join(baseDir, toolName+".txt"), nil
 }
 
 
@@ -48,7 +48,7 @@ func GetPages() []string {
 
 	availablePages := make([]string, len(pages))
 	for i, p := range pages {
-		toolName := strings.TrimSuffix(p.Name(), ".md")
+		toolName := strings.TrimSuffix(p.Name(), ".txt")
 		availablePages[i] = toolName
 	}
 
